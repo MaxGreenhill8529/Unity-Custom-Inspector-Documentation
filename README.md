@@ -1,6 +1,7 @@
 # Unity-Custom-Inspector-Documentation
 This documentation is unofficial and was made for my own personal reference.\
-This documentation is for the original and thus older version of unity's custom inspector 
+This is for the original and thus older version of Unity's custom inspector solution ['IMGUI'](https://docs.unity3d.com/6000.1/Documentation/Manual/GUIScriptingGuide.html) and while it is still supported and a way to implement custom inspectors, the company is leaning towards using their newer UI Toolkit. 
+> Unity intends for UI Toolkit to become the recommended UI system for new UI development projects, but it still lacks some features available in uGUI and IMGUI.
 # Script Set Up
 <img width="370" height="296" alt="Blank2D - TestInspector cs_ - Microsoft Visual Studio 8_8_2025 8_06_56 PM" src="https://github.com/user-attachments/assets/6e4c7a7a-2a23-4f4e-8918-856840d1e969" />\
 Ensure that the script is inside a folder labeled 'Editor'
