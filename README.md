@@ -4,9 +4,9 @@
 
 #Button
 `if(GUILayout.Button("Test Investigate State"))`\
-{\
-    dogContext.TestInvestigateState();\
-}\`
+`{`
+    `dogContext.TestInvestigateState();`\
+`}`\
 #Tooltips
 
 #Displaying Variables
