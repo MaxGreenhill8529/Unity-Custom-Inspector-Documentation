@@ -1,14 +1,14 @@
 # Unity-Custom-Inspector-Documentation
 
-#Script Set Up
+# Script Set Up
 
-#Button
+# Button
 `if(GUILayout.Button("Test Investigate State"))`\
 `{`
     `dogContext.TestInvestigateState();`\
 `}`\
-#Tooltips
+# Tooltips
 
-#Displaying Variables
+# Displaying Variables
 
-#Dropdowns
+# Dropdowns
