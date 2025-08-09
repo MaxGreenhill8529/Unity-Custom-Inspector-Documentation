@@ -3,10 +3,10 @@
 # Script Set Up
 
 # Button
-`if(GUILayout.Button("Test Investigate State"))`\
-`{`
-    `dogContext.TestInvestigateState();`\
-`}`\
+`if(GUILayout.Button("Test Investigate State"))
+{
+    dogContext.TestInvestigateState();
+}`\
 # Tooltips
 
 # Displaying Variables
