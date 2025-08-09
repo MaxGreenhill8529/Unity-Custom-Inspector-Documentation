@@ -4,9 +4,11 @@ This is for the original and thus older version of Unity's custom inspector solu
 > Unity intends for UI Toolkit to become the recommended UI system for new UI development projects, but it still lacks some features available in uGUI and IMGUI.
 # Script Set Up
 <img width="370" height="296" alt="Blank2D - TestInspector cs_ - Microsoft Visual Studio 8_8_2025 8_06_56 PM" src="https://github.com/user-attachments/assets/6e4c7a7a-2a23-4f4e-8918-856840d1e969" />\
-Ensure that the script is inside a folder labeled 'Editor'
+Ensure that the script is inside a folder labeled 'Editor'. All scripts inside a folder labled as 'Editor' wont be included in builds and signals to Unity to handle them as editor scripts and give them their own assembly behind the scenes. Also change 'Monobehavior' to the script that you are making the custom inspector for.
+
+
 # Button
-<img width="314" height="248" alt="Blank2D - TestInspector cs_ - Microsoft Visual Studio 8_8_2025 8_14_38 PM" src="https://github.com/user-attachments/assets/1f65e24b-866b-4576-818b-3557a0a21efc" />
+<img width="314" height="248" alt="Blank2D - TestInspector cs_ - Microsoft Visual Studio 8_8_2025 8_14_38 PM" src="https://github.com/user-attachments/assets/1f65e24b-866b-4576-818b-3557a0a21efc" />\
 
 # Tooltips
 
@@ -15,4 +17,4 @@ Ensure that the script is inside a folder labeled 'Editor'
 # Dropdowns
 
 # Headers
-<img width="358" height="286" alt="Messy-Cat-Game - DogContextCustomInspector cs_ - Microsoft Visual Studio 8_8_2025 8_21_04 PM" src="https://github.com/user-attachments/assets/a5b2c86e-f936-439d-a181-b8f682e3e79d" />
+<img width="358" height="286" alt="Messy-Cat-Game - DogContextCustomInspector cs_ - Microsoft Visual Studio 8_8_2025 8_21_04 PM" src="https://github.com/user-attachments/assets/a5b2c86e-f936-439d-a181-b8f682e3e79d" />\
