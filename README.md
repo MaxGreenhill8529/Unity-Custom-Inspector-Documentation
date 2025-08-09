@@ -1,5 +1,5 @@
 # Unity-Custom-Inspector-Documentation
-This documentation is unofficial and was made for my own personal reference.\
+This documentation is unofficial and was made for my own personal reference and needs. With that said I tried my best to be accurate and extensive.\
 This is for the original and thus older version of Unity's custom inspector solution ['IMGUI'](https://docs.unity3d.com/6000.1/Documentation/Manual/GUIScriptingGuide.html) and while it is still supported and a way to implement custom inspectors, the company is leaning towards using their newer UI Toolkit. 
 > Unity intends for UI Toolkit to become the recommended UI system for new UI development projects, but it still lacks some features available in uGUI and IMGUI.
 # Script Set Up
