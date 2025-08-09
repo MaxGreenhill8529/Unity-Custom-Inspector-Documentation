@@ -3,7 +3,7 @@
 #Script Set Up
 
 #Button
-`if(GUILayout.Button("Test Investigate State"))\
+`if(GUILayout.Button("Test Investigate State"))`\
 {\
     dogContext.TestInvestigateState();\
 }\`
