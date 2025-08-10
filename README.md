@@ -4,7 +4,10 @@ This is for the original and thus older version of Unity's custom inspector solu
 > Unity intends for UI Toolkit to become the recommended UI system for new UI development projects, but it still lacks some features available in uGUI and IMGUI.
 # Script Set Up
 <img width="370" height="296" alt="Blank2D - TestInspector cs_ - Microsoft Visual Studio 8_8_2025 8_06_56 PM" src="https://github.com/user-attachments/assets/6e4c7a7a-2a23-4f4e-8918-856840d1e969" />\
-Ensure that the script is inside a folder labeled 'Editor'. All scripts inside a folder labled as 'Editor' wont be included in builds and signals to Unity to handle them as editor scripts and give them their own assembly behind the scenes. Also change 'Monobehavior' to the script that you are making the custom inspector for.
+Change 'Monobehavior' to the script that you are making the custom inspector for.
+> [!TIP]
+> Place the script inside a folder labeled 'Editor' to signal to Unity to handle it as an editor script which excludes it from builds and gives it, it's own assembly behind the scenes.
+
 
 
 # Button
@@ -18,3 +21,13 @@ Ensure that the script is inside a folder labeled 'Editor'. All scripts inside a
 
 # Headers
 <img width="358" height="286" alt="Messy-Cat-Game - DogContextCustomInspector cs_ - Microsoft Visual Studio 8_8_2025 8_21_04 PM" src="https://github.com/user-attachments/assets/a5b2c86e-f936-439d-a181-b8f682e3e79d" />\
+
+# Custom Spacing
+### Before
+<img width="286" height="229" alt="Before Spacing" src="https://github.com/user-attachments/assets/ac19703e-1d58-437f-8d85-c0630e2969c6" />
+
+
+### After
+<img width="296" height="236" alt="After Spacing" src="https://github.com/user-attachments/assets/559a0627-a439-407d-93a9-aad7bc69b827" />\
+By default `EditorGUILayout.Space()` creates a horizontal gap of of 6[^1]. This can be overridden by using the `EditorGUILayout.Space(float width)` overload.
+[^1]: There isn't a measure of unit for the input float.
