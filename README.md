@@ -4,9 +4,11 @@ This is for the original and thus older version of Unity's custom inspector solu
 > Unity intends for UI Toolkit to become the recommended UI system for new UI development projects, but it still lacks some features available in uGUI and IMGUI.
 # Script Set Up
 <img width="370" height="296" alt="Picture of Visual Studio code block" src="https://github.com/user-attachments/assets/6e4c7a7a-2a23-4f4e-8918-856840d1e969" />\
-Change 'Monobehavior' to the script that you are making the custom inspector for. And make sure to inherit from Editor.
+Change 'Monobehavior' to the script that you are making the custom inspector for. And make sure to inherit from Editor.\
+For added customization, you can change the CanEditMultipleObjects attribute which tells Unity that you can select multiple objects with this editor and change them all at the same time. The default value is `true` `[CustomEditor(typeof(LookAtPoint),bool CanEditMultipleObjects)]`
 > [!TIP]
-> Place the script inside a folder labeled 'Editor' to signal to Unity to handle it as an editor script which excludes it from builds and gives it, it's own assembly behind the scenes.
+> Place the script inside a folder labeled 'Editor' to signal to Unity to handle it as an editor script which excludes it from builds and gives it, it's own assembly behind the scenes. The script will still work outside of an editor folder, but this is best practice.\
+
 
 
 
