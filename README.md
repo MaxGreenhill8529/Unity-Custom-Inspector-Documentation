@@ -20,7 +20,7 @@ For added customization, you can change the CanEditMultipleObjects attribute whi
 
 # Tooltips
 `EditorGUILayout.PropertyField(SerializedProperty property, GUIContent label)`\
-Include the label parameter by declaring a `new GUIContent(String text)`
+Include the label parameter by declaring a `new GUIContent(String text)` when displaying the variable to include a tooltip.
 
 
 # Dropdowns
