@@ -14,13 +14,13 @@ For added customization, you can change the CanEditMultipleObjects attribute whi
 
 # Button
 <img width="314" height="248" alt="Blank2D - TestInspector cs_ - Microsoft Visual Studio 8_8_2025 8_14_38 PM" src="https://github.com/user-attachments/assets/1f65e24b-866b-4576-818b-3557a0a21efc" />\
-
+Anything inside the if statement will get executed once the button has been clicked. This can include console prints, functions from the targeted[^2] class, and changing values in the inspector.
 # Displaying Variables
 `EditorGUILayout.PropertyField(SerializedProperty property)`
-
+Displays the property in the inspector using the name as defined by the variable in the targeted[^2] class.
 # Tooltips
 `EditorGUILayout.PropertyField(SerializedProperty property, GUIContent label)`\
-Include the label parameter by declaring a `new GUIContent(String text)` when displaying the variable to include a tooltip.
+Include the label parameter by declaring a `new GUIContent(String text)` when displaying the variable to include a tooltip. The label will become the new displayed name instead of the variable name.
 
 
 # Dropdowns
@@ -32,8 +32,8 @@ Include the label parameter by declaring a `new GUIContent(String text)` when di
 ### Before
 <img width="286" height="229" alt="Before Spacing" src="https://github.com/user-attachments/assets/ac19703e-1d58-437f-8d85-c0630e2969c6" />
 
-
 ### After
 <img width="296" height="236" alt="After Spacing" src="https://github.com/user-attachments/assets/559a0627-a439-407d-93a9-aad7bc69b827" />\
 By default `EditorGUILayout.Space()` creates a horizontal gap of of 6[^1]. This can be overridden by using the `EditorGUILayout.Space(float width)` overload.
 [^1]: There isn't a measure of unit for the input float.
+[^2]: When I refer to the 'Targeted class' I am referring to the class that this script is acting as the custom inspector for.
