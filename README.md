@@ -7,7 +7,7 @@ This is for the original and thus older version of Unity's custom inspector solu
 Change 'Monobehavior' to the script that you are making the custom inspector for. And make sure to inherit from Editor.\
 For added customization, you can change the CanEditMultipleObjects attribute which tells Unity that you can select multiple objects with this editor and change them all at the same time. The default value is `true` `[CustomEditor(typeof(LookAtPoint),bool CanEditMultipleObjects)]`
 > [!TIP]
-> Place the script inside a folder labeled 'Editor' to signal to Unity to handle it as an editor script which excludes it from builds and gives it, it's own assembly behind the scenes. The script will still work outside of an editor folder, but this is best practice.\
+> Place the script inside a folder labeled 'Editor' to signal to Unity to handle it as an editor script which excludes it from builds and gives it, it's own assembly behind the scenes. The script will still work outside of an editor folder, but this is best practice.
 
 
 
