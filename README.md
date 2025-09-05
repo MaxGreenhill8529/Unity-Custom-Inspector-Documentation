@@ -18,6 +18,8 @@ Anything inside the if statement will get executed once the button has been clic
 # Displaying Variables
 `EditorGUILayout.PropertyField(SerializedProperty property)`
 Displays the property in the inspector using the name as defined by the variable in the targeted[^2] class.
+> [!Tip]
+> An advange of this is the ability to add conditions to them displaying. Often time with complex inspectors you want to hide variables unless a box is ticked, in order for the user to focus better. You can do this without incorperating a variable into the targeted[^2] class, thus cleaning up the class. bool showAdvancedSettings EditorGuiLayout.PropertyField 
 # Tooltips
 `EditorGUILayout.PropertyField(SerializedProperty property, GUIContent label)`\
 Include the label parameter by declaring a `new GUIContent(String text)` when displaying the variable to include a tooltip. The label will become the new displayed name instead of the variable name.
@@ -34,6 +36,6 @@ Include the label parameter by declaring a `new GUIContent(String text)` when di
 
 ### After
 <img width="296" height="236" alt="After Spacing" src="https://github.com/user-attachments/assets/559a0627-a439-407d-93a9-aad7bc69b827" />\
-By default `EditorGUILayout.Space()` creates a horizontal gap of of 6[^1]. This can be overridden by using the `EditorGUILayout.Space(float width)` overload.
+By default `EditorGUILayout.Space()` creates a horizontal gap of 6[^1]. This can be overridden by using the `EditorGUILayout.Space(float width)` overload.
 [^1]: There isn't a measure of unit for the input float.
 [^2]: When I refer to the 'Targeted class' I am referring to the class that this script is acting as the custom inspector for.
