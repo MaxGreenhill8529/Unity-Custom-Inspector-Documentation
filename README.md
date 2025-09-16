@@ -29,7 +29,7 @@ Include the label parameter by declaring a `new GUIContent(String text)` when di
 
 # Headers
 <img width="358" height="286" alt="Messy-Cat-Game - DogContextCustomInspector cs_ - Microsoft Visual Studio 8_8_2025 8_21_04 PM" src="https://github.com/user-attachments/assets/a5b2c86e-f936-439d-a181-b8f682e3e79d" />\
-
+`EditorGUILayout.LabelField(string text, EditorStyles style)`
 # Custom Spacing
 ### Before
 <img width="286" height="229" alt="Before Spacing" src="https://github.com/user-attachments/assets/ac19703e-1d58-437f-8d85-c0630e2969c6" />
@@ -39,3 +39,12 @@ Include the label parameter by declaring a `new GUIContent(String text)` when di
 By default `EditorGUILayout.Space()` creates a horizontal gap of 6[^1]. This can be overridden by using the `EditorGUILayout.Space(float width)` overload.
 [^1]: There isn't a measure of unit for the input float.
 [^2]: When I refer to the 'Targeted class' I am referring to the class that this script is acting as the custom inspector for.
+
+# Help Boxes
+`HelpBox(string message, MessageType type)`
+`enum MessageType {None, Info, Warning, Error}`
+
+# Making read only fields
+`EditorGUI.BeginDisabledGroup(true);`
+anything between these two lines will be faded out and read only.
+`EditorGUI.EndDisabledGroup();`
