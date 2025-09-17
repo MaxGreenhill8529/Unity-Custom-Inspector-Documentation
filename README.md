@@ -18,8 +18,8 @@ For added customization, you can change the CanEditMultipleObjects attribute whi
 Anything inside the if statement will get executed once the button has been clicked. This can include console prints, functions from the targeted[^2] class, and changing values in the inspector.
 
 # Displaying Variables
-`SerializedProperty property = serializedObject.FindProperty(string nameOfProperty);\
-EditorGUILayout.PropertyField(SerializedProperty property);`
+`SerializedProperty property = serializedObject.FindProperty(string nameOfProperty);`\
+`EditorGUILayout.PropertyField(SerializedProperty property);`
 Displays the property in the inspector using the name as defined by the variable in the targeted[^2] class.
 > [!Tip]
 > An advange of this is the ability to add conditions to them displaying. Often times with complex inspectors you want to hide variables unless a box is ticked in order for the user to focus better. You can do this without incorperating a variable into the targeted[^2] class, thus cleaning up the class. bool showAdvancedSettings EditorGuiLayout.PropertyField
