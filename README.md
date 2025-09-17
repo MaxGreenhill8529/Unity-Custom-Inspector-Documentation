@@ -18,7 +18,7 @@ For added customization, you can change the CanEditMultipleObjects attribute whi
 Anything inside the if statement will get executed once the button has been clicked. This can include console prints, functions from the targeted[^2] class, and changing values in the inspector.
 
 # Displaying Variables
-`SerializedProperty property = serializedObject.FindProperty(string nameOfProperty);
+`SerializedProperty property = serializedObject.FindProperty(string nameOfProperty);\
 EditorGUILayout.PropertyField(SerializedProperty property);`
 Displays the property in the inspector using the name as defined by the variable in the targeted[^2] class.
 > [!Tip]
