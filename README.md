@@ -14,26 +14,38 @@ For added customization, you can change the CanEditMultipleObjects attribute whi
 
 
 # Button
-<img width="314" height="248" alt="Blank2D - TestInspector cs_ - Microsoft Visual Studio 8_8_2025 8_14_38 PM" src="https://github.com/user-attachments/assets/1f65e24b-866b-4576-818b-3557a0a21efc" />\
-Anything inside the if statement will get executed once the button has been clicked. This can include console prints, functions from the targeted[^2] class, and changing values in the inspector.
+```
+if(GUILayout.Button("Button"))
+{
+  //Do stuff...
+}
+```
+Anything inside the if statement will get executed once the button has been clicked. This can be any function call that is not reliant on the game running. For example, [Destroy()](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Object.Destroy.html) wont execute because it is dependent on the Update Loop. The solution would be to use DestroyImmediate().
+>[DestroyImmediate](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Object.DestroyImmediate.html) is intended for use in scripts that run in Edit mode, not at runtime. In Edit mode, the usual delayed destruction performed by Destroy does not occur, so immediate destruction is necessary.[^3]
 
 # Displaying Variables
 `SerializedProperty property = serializedObject.FindProperty(string nameOfProperty);`\
 `EditorGUILayout.PropertyField(SerializedProperty property);`
 Displays the property in the inspector using the name as defined by the variable in the targeted[^2] class.
-> [!Tip]
-> An advange of this is the ability to add conditions to them displaying. Often times with complex inspectors you want to hide variables unless a box is ticked in order for the user to focus better. You can do this without incorperating a variable into the targeted[^2] class, thus cleaning up the class. bool showAdvancedSettings EditorGuiLayout.PropertyField
+Everything is displayed in the order it is read from top to bottom in the editor script.
 
-# Tooltips
+# Tooltips And Custom Variable Names
 `EditorGUILayout.PropertyField(SerializedProperty property, GUIContent label)`\
-Include the label parameter by declaring a `new GUIContent(String text)` when displaying the variable to include a tooltip. The label will become the new displayed name instead of the variable name.
-
+Including the `GUIContent label` parameter allows you to override the default variable name and include a tooltip if you'd like.
+[`public GUIContent(string text, string tooltip);`](https://docs.unity3d.com/ScriptReference/GUIContent-ctor.html)
 
 # Dropdowns
+`boolean foldoutVisible = EditorGUILayout.BeginFoldoutHeaderGroup(foldoutVisible, string header);`\
 
+```
+if(foldoutVisible)
+{
+
+}
+```
 # Headers
-<img width="358" height="286" alt="Messy-Cat-Game - DogContextCustomInspector cs_ - Microsoft Visual Studio 8_8_2025 8_21_04 PM" src="https://github.com/user-attachments/assets/a5b2c86e-f936-439d-a181-b8f682e3e79d" />\
 `EditorGUILayout.LabelField(string text, EditorStyles style)`
+['EditorStyle Options'](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/EditorStyles.html)
 # Custom Spacing
 ### Before
 <img width="286" height="229" alt="Before Spacing" src="https://github.com/user-attachments/assets/ac19703e-1d58-437f-8d85-c0630e2969c6" />
@@ -43,7 +55,7 @@ Include the label parameter by declaring a `new GUIContent(String text)` when di
 By default `EditorGUILayout.Space()` creates a horizontal gap of 6[^1]. This can be overridden by using the `EditorGUILayout.Space(float width)` overload.
 [^1]: There isn't a measure of unit for the input float.
 [^2]: When I refer to the 'Targeted class' I am referring to the class that this script is acting as the custom inspector for.
-
+[^3]: [Source for DestroyImmediate Quote](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Object.DestroyImmediate.html)
 # Help Boxes
 `HelpBox(string message, MessageType type)`
 `enum MessageType {None, Info, Warning, Error}`
