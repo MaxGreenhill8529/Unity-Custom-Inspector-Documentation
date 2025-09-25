@@ -22,10 +22,12 @@ if(GUILayout.Button("Button"))
 ```
 Anything inside the if statement will get executed once the button has been clicked. This can be any function call that is not reliant on the game running. For example, [Destroy()](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Object.Destroy.html) wont execute because it is dependent on the Update Loop. The solution would be to use DestroyImmediate().
 >[DestroyImmediate](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Object.DestroyImmediate.html) is intended for use in scripts that run in Edit mode, not at runtime. In Edit mode, the usual delayed destruction performed by Destroy does not occur, so immediate destruction is necessary.[^3]
-
+[^3]: [Source for DestroyImmediate Quote](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Object.DestroyImmediate.html)
 # Displaying Variables
-`SerializedProperty property = serializedObject.FindProperty(string nameOfProperty);`\
-`EditorGUILayout.PropertyField(SerializedProperty property);`
+```
+SerializedProperty property = serializedObject.FindProperty(string nameOfProperty);
+EditorGUILayout.PropertyField(SerializedProperty property);`
+```
 Displays the property in the inspector using the name as defined by the variable in the targeted[^2] class.
 Everything is displayed in the order it is read from top to bottom in the editor script.
 
@@ -55,12 +57,15 @@ if(foldoutVisible)
 By default `EditorGUILayout.Space()` creates a horizontal gap of 6[^1]. This can be overridden by using the `EditorGUILayout.Space(float width)` overload.
 [^1]: There isn't a measure of unit for the input float.
 [^2]: When I refer to the 'Targeted class' I am referring to the class that this script is acting as the custom inspector for.
-[^3]: [Source for DestroyImmediate Quote](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Object.DestroyImmediate.html)
+
 # Help Boxes
 `HelpBox(string message, MessageType type)`
 `enum MessageType {None, Info, Warning, Error}`
 
 # Making read only fields
+```
 `EditorGUI.BeginDisabledGroup(true);`
+
+`EditorGUI.EndDisabledGroup();
+```
 anything between these two lines will be faded out and read only.
-`EditorGUI.EndDisabledGroup();`
