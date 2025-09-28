@@ -51,6 +51,7 @@ Displays the property found by the FindProperty function. Note that the string i
 Everything is displayed in the order it is written from top to bottom in the editor script.
 > [!TIP]
 > If you find strings annoying you can use [nameOf()](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof) instead, however this requires the editor script to have 'get' access to the variable which can become a hassle.
+
 > [!WARNING]
 > The field you are trying to access must be publicly accesably! Internal or protected will not suffice. 
 # Tooltips And Custom Variable Names
