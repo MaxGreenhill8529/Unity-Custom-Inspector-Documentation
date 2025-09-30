@@ -47,13 +47,12 @@ Anything inside the if statement will get executed once the button has been clic
 SerializedProperty property = serializedObject.FindProperty(string nameOfProperty);
 EditorGUILayout.PropertyField(SerializedProperty property);
 ```
-Displays the property found by the FindProperty function. Note that the string is case sensitive!
-Everything is displayed in the order it is written from top to bottom in the editor script.
+Displays the field found by the FindProperty function. Note that the string is case sensitive!
+If the variable you are attempting to access is marked as `private`, include the `[SerializeField]` attribute to it in the targeted class.
+
 > [!TIP]
 > If you find strings annoying you can use [nameOf()](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof) instead, however this requires the editor script to have 'get' access to the variable which can become a hassle.
 
-> [!WARNING]
-> The field you are trying to access must be publicly accesably! Internal or protected will not suffice. 
 # Tooltips And Custom Variable Names
 `EditorGUILayout.PropertyField(SerializedProperty property, GUIContent label)`\
 Including the `GUIContent label` parameter allows you to override the default variable name and include a tooltip if you'd like. Create a GUIContent using the following constructor [`public GUIContent(string text, string tooltip);`](https://docs.unity3d.com/ScriptReference/GUIContent-ctor.html)
