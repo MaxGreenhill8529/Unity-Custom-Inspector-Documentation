@@ -48,7 +48,8 @@ SerializedProperty property = serializedObject.FindProperty(string nameOfPropert
 EditorGUILayout.PropertyField(SerializedProperty property);
 ```
 Displays the field found by the FindProperty function. Note that the string is case sensitive!
-If the variable you are attempting to access is marked as `private`, include the `[SerializeField]` attribute to it in the targeted class.
+> [!WARNING]
+> If the variable you are attempting to access is marked as `private`, include the `[SerializeField]` to allow the editor script to serialize it.
 
 > [!TIP]
 > If you find strings annoying you can use [nameOf()](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof) instead, however this requires the editor script to have 'get' access to the variable which can become a hassle.
